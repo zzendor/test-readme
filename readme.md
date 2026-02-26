@@ -1,6 +1,6 @@
 # EasySave
 
-**EasySave** is a Windows backup utility developed as part of the FISA3 2026 engineering curriculum at CESI. It provides a graphical desktop interface for creating, configuring, and executing backup jobs with support for concurrent execution, priority-based file ordering, selective encryption, and remote log collection.
+**EasySave** is a Windows backup utility developed. It provides a graphical desktop interface for creating, configuring, and executing backup jobs with support for concurrent execution, priority-based file ordering, selective encryption, and remote log collection.
 
 > Technical documentation: [TECHNICAL_DOC.md](TECHNICAL_DOC.md)
 
@@ -74,7 +74,6 @@ EasySave.Tests
 | Remote logging | Raw TCP sockets (`System.Net.Sockets`) |
 | Containerization | Docker (LogServer only) |
 | Unit tests | xUnit 2.7, Moq 4.20, coverlet |
-| IDE | JetBrains Rider |
 
 ---
 
@@ -87,52 +86,6 @@ EasySave.Tests
 
 ---
 
-## Installation
-
-```bash
-git clone https://github.com/thiz68/FISA3_2026_G1_GABUS.git
-cd FISA3_2026_G1_GABUS/EasySave
-dotnet restore
-dotnet build
-```
-
----
-
-## How to Run
-
-### WPF Application (recommended)
-
-```bash
-dotnet run --project EasySave.WPF
-```
-
-Or run the built executable directly:
-
-```
-EasySave.WPF\bin\Debug\net8.0-windows\EasySave.WPF.exe
-```
-
-### Console Application
-
-```bash
-dotnet run --project EasySave.Console
-```
-
-### Remote Log Server (Docker)
-
-```bash
-docker compose up -d
-```
-
-The server listens on port 5000 by default. Logs are persisted in the `log_data` Docker volume under `CentralLogs/`.
-
-To run without Docker:
-
-```bash
-dotnet run --project EasySave.LogServer
-```
-
----
 
 ## Usage
 
@@ -415,6 +368,7 @@ Commit prefixes: `feat`, `fix`, `chore`, `refactor`, `docs`, `test`.
 
 ## Authors
 
-FISA3 2026 — Group 1 GABUS — CESI Engineering School
+FISA3 2026 — Group 1 — CESI Engineering School
 
-Contributors: Thibaud GABUS, Hugo, Clery, Pauldems, zd0r
+Contributors: Thibaud, Hugo, Clery, Paul,
+
